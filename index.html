@@ -53,6 +53,28 @@
     @media(max-width:760px){.shell{padding:0 18px}header{height:73px}.brand{font-size:21px}.brand-mark{width:42px;height:42px}main{padding-top:31px}.headline{margin-bottom:22px}h1{font-size:44px;letter-spacing:-2px}.cards{grid-template-columns:1fr;gap:19px}.art{height:240px}.info h2{font-size:25px}.play{min-height:64px}.header-badge{font-size:12px;padding:8px 11px}}
     @media(max-width:390px){.art{height:205px}.game-logo{width:94%}.info{padding:18px}.info-head{align-items:start;flex-direction:column}.hint{display:none}.brand{font-size:19px}.header-badge{font-size:11px}}
     @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  
+    :root{--bg:#0b0c18;--lime:#c08aff;--ink:#fbf8ff}
+    header{border-bottom-color:#9760d9;gap:14px}
+    .brand-mark{background:#211634;color:var(--lime);box-shadow:none}
+    header nav{display:flex;gap:8px}
+    header nav a{padding:9px 13px;border-radius:10px;font-weight:750;color:#dfd1f2}
+    header nav a:hover,header nav a:first-child{background:#312149}
+    .headline{display:block;text-align:center;margin-bottom:34px}
+    .headline::after{content:"";display:block;margin:19px auto 0;width:64px;height:5px;border-radius:10px;background:#a257ef}
+    h1{font-size:clamp(39px,6vw,78px);letter-spacing:-.045em}
+    h1 strong{color:#bc77ff}
+    .intro{font-size:clamp(16px,2.4vw,24px)}
+    .game{border-color:#a662ed;background:#151629;display:flex;flex-direction:column;box-shadow:0 15px 42px #05060c70}
+    .game:hover{border-color:#d4a5ff}
+    .art{height:auto;aspect-ratio:2.2;min-height:150px}
+    .game-shot{width:100%;height:100%;object-fit:cover;object-position:center 45%}
+    .info{display:flex;flex-direction:column;flex:1}
+    .info-head{align-items:flex-start;flex-direction:column;flex:1}
+    .info p{font-size:16px}
+    .hint{display:inline-block;background:#25203b;border-color:#51436e}
+    .game .play{background:linear-gradient(#9045e8,#6d31ca);color:white;box-shadow:inset 0 1px #d29dff;min-height:55px}
+    @media(max-width:450px){header nav a{font-size:14px;padding:8px}.brand-mark{width:36px;height:36px}.brand{gap:6px}.art{min-height:135px}}
   </style>
 </head>
 <body>
@@ -62,30 +84,23 @@
         <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 8h11a4 4 0 0 1 3.8 3l1.2 5.2a2.4 2.4 0 0 1-4 2.3L16 16H8l-2.5 2.5a2.4 2.4 0 0 1-4-2.3L2.7 11a4 4 0 0 1 3.8-3Z"/><path d="M7 11v5M4.5 13.5h5M16 12h.01M18.5 14h.01"/></svg></span>
         <span>FAYEZ <strong>ARCADE</strong></span>
       </a>
-      <span class="header-badge">2 GAMES</span>
+      <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#games">Games</a></nav>
     </header>
-    <main>
+    <main id="home">
       <div class="headline">
         <div>
-          <p class="tagline">YOUR GAME COLLECTION</p>
-          <h1>Pick a game<span style="color:var(--lime)">.</span></h1>
-          <p class="intro">Play with your friends.</p>
+          <h1>Fayez <strong>Arcade</strong></h1><p class="intro">Play my multiplayer games with your friends.</p>
         </div>
       </div>
-      <div class="cards">
-        <article class="game chess">
-          <div class="art">
-            <span class="game-type">♟ STRATEGY</span>
-            <img class="game-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iMjQwIiB2aWV3Qm94PSIwIDAgNjQwIDI0MCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJGYXlleiBDaGVzcyBsb2dvIj4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9Im1ldGFsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZjNkMCIvPjxzdG9wIG9mZnNldD0iLjUiIHN0b3AtY29sb3I9IiNmZmNmNzYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNlZTkzNDkiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJnb2xkIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZGM4YSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2YzOWE0YSIvPjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTYgMTMpIj4KIDxyZWN0IHg9IjUiIHk9IjUiIHdpZHRoPSIyMTIiIGhlaWdodD0iMjEyIiByeD0iNDYiIGZpbGw9IiMyMDFhMzUiLz4KIDxyZWN0IHg9IjEzIiB5PSIxMyIgd2lkdGg9IjE5NiIgaGVpZ2h0PSIxOTYiIHJ4PSIzOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWFhODVjIiBzdHJva2Utb3BhY2l0eT0iLjQiIHN0cm9rZS13aWR0aD0iMiIvPgogPHBhdGggZD0iTTQ0IDQ1aDU4djU4SDQ0em01OCA1OGg1OHY1OGgtNTh6bS01OCA1OGg1OHYzMUg0NHoiIGZpbGw9IiNmZmUwYTkiIG9wYWNpdHk9Ii4xMSIvPgogPHBhdGggZD0iTTc2IDE3N2MwLTE4IDQtMzAgMTUtNDNMNzcgMTA4bDEwLTI3IDIyLTMgMTktMjdjMTMtMTcgMzAtMTUgNDctNSA3IDUgNyAxNiAxIDI0bC0xNiAxOGMtMyA0LTMgMTAgMSAxNGw3IDdjMTAgMTAgMTMgMjIgMTMgMzd2MzFINzZ6IiBmaWxsPSJ1cmwoI21ldGFsKSIvPgogPHBhdGggZD0iTTEwOSA4MCAxMjYgNTJjMTAtMTMgMjMtMTMgMzYtNmwtMTcgMzEtMjUgMjJ6IiBmaWxsPSIjZmZlMGE5Ii8+CiA8Y2lyY2xlIGN4PSIxMzciIGN5PSI3MiIgcj0iNSIgZmlsbD0iIzNhMjUzNSIvPgogPHBhdGggZD0iTTc4IDE3N2gxMDh2MTRINzBjMC04IDMtMTQgOC0xNHoiIGZpbGw9IiNlNThkNGMiLz4KIDxwYXRoIGQ9Ik02OCAxOTJoMTIxYzcgMCAxMSA3IDExIDEzSDU2YzAtNyA2LTEzIDEyLTEzeiIgZmlsbD0iI2ZmZTFhMCIvPgo8L2c+CjxnIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBsZXR0ZXItc3BhY2luZz0iLTIiPgogPHRleHQgeD0iMjU0IiB5PSIxMTAiIGZpbGw9IiNmZmY4ZWIiIGZvbnQtc2l6ZT0iNzQiPkZBWUVaPC90ZXh0PgogPHRleHQgeD0iMjUyIiB5PSIxODciIGZpbGw9InVybCgjZ29sZCkiIGZvbnQtc2l6ZT0iODMiPkNIRVNTPC90ZXh0Pgo8L2c+Cjwvc3ZnPgo=" alt="Fayez Chess logo" loading="eager">
-          </div>
+      <div class="cards" id="games">
+        <article class="game among">
+          <div class="art"><img class="game-shot" src="among-us.jpg" alt="Players gathered in the Fayez Among Us Cafeteria"></div>
           <div class="info">
             <div class="info-head">
-              <div><h2>Fayez Chess</h2><p>Challenge a friend. Make your move.</p></div>
-              <span class="hint">2 PLAYERS</span>
+              <div><h2>Fayez Among Us</h2><p>Complete tasks, find the Impostor, and try roles like Jester and Vulture.</p></div>
+              <span class="hint">4–10 PLAYERS</span>
             </div>
-            <a class="play" href="https://fayez2011.github.io/FAYEZCHESS/chess/" target="_blank" rel="noopener noreferrer" aria-label="Play Fayez Chess, opens in a new tab">
-              Play Chess <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-            </a>
+            <a class="play" href="https://fayezarcade.github.io/FayezAmongUs/" target="_blank" rel="noopener noreferrer" aria-label="Play Fayez Among Us, opens in a new tab"><span aria-hidden="true">▶</span> Play Among Us</a>
           </div>
         </article>
         <article class="game skribbl">
@@ -103,8 +118,22 @@
             </a>
           </div>
         </article>
+        <article class="game chess">
+          <div class="art">
+            <span class="game-type">♟ STRATEGY</span>
+            <img class="game-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iMjQwIiB2aWV3Qm94PSIwIDAgNjQwIDI0MCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJGYXlleiBDaGVzcyBsb2dvIj4KPGRlZnM+CiA8bGluZWFyR3JhZGllbnQgaWQ9Im1ldGFsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZjNkMCIvPjxzdG9wIG9mZnNldD0iLjUiIHN0b3AtY29sb3I9IiNmZmNmNzYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNlZTkzNDkiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJnb2xkIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZGM4YSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2YzOWE0YSIvPjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTYgMTMpIj4KIDxyZWN0IHg9IjUiIHk9IjUiIHdpZHRoPSIyMTIiIGhlaWdodD0iMjEyIiByeD0iNDYiIGZpbGw9IiMyMDFhMzUiLz4KIDxyZWN0IHg9IjEzIiB5PSIxMyIgd2lkdGg9IjE5NiIgaGVpZ2h0PSIxOTYiIHJ4PSIzOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWFhODVjIiBzdHJva2Utb3BhY2l0eT0iLjQiIHN0cm9rZS13aWR0aD0iMiIvPgogPHBhdGggZD0iTTQ0IDQ1aDU4djU4SDQ0em01OCA1OGg1OHY1OGgtNTh6bS01OCA1OGg1OHYzMUg0NHoiIGZpbGw9IiNmZmUwYTkiIG9wYWNpdHk9Ii4xMSIvPgogPHBhdGggZD0iTTc2IDE3N2MwLTE4IDQtMzAgMTUtNDNMNzcgMTA4bDEwLTI3IDIyLTMgMTktMjdjMTMtMTcgMzAtMTUgNDctNSA3IDUgNyAxNiAxIDI0bC0xNiAxOGMtMyA0LTMgMTAgMSAxNGw3IDdjMTAgMTAgMTMgMjIgMTMgMzd2MzFINzZ6IiBmaWxsPSJ1cmwoI21ldGFsKSIvPgogPHBhdGggZD0iTTEwOSA4MCAxMjYgNTJjMTAtMTMgMjMtMTMgMzYtNmwtMTcgMzEtMjUgMjJ6IiBmaWxsPSIjZmZlMGE5Ii8+CiA8Y2lyY2xlIGN4PSIxMzciIGN5PSI3MiIgcj0iNSIgZmlsbD0iIzNhMjUzNSIvPgogPHBhdGggZD0iTTc4IDE3N2gxMDh2MTRINzBjMC04IDMtMTQgOC0xNHoiIGZpbGw9IiNlNThkNGMiLz4KIDxwYXRoIGQ9Ik02OCAxOTJoMTIxYzcgMCAxMSA3IDExIDEzSDU2YzAtNyA2LTEzIDEyLTEzeiIgZmlsbD0iI2ZmZTFhMCIvPgo8L2c+CjxnIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBsZXR0ZXItc3BhY2luZz0iLTIiPgogPHRleHQgeD0iMjU0IiB5PSIxMTAiIGZpbGw9IiNmZmY4ZWIiIGZvbnQtc2l6ZT0iNzQiPkZBWUVaPC90ZXh0PgogPHRleHQgeD0iMjUyIiB5PSIxODciIGZpbGw9InVybCgjZ29sZCkiIGZvbnQtc2l6ZT0iODMiPkNIRVNTPC90ZXh0Pgo8L2c+Cjwvc3ZnPgo=" alt="Fayez Chess logo" loading="eager">
+          </div>
+          <div class="info">
+            <div class="info-head">
+              <div><h2>Fayez Chess</h2><p>Challenge a friend. Make your move.</p></div>
+              <span class="hint">2 PLAYERS</span>
+            </div>
+            <a class="play" href="https://fayez2011.github.io/FAYEZCHESS/chess/" target="_blank" rel="noopener noreferrer" aria-label="Play Fayez Chess, opens in a new tab">
+              Play Chess <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
       </div>
-      <p class="bottomline">More games coming soon.</p>
     </main>
   </div>
 </body>
